@@ -1,9 +1,9 @@
 from PyPDF2 import PdfReader, PdfWriter
 import sys
 
-locked_file = input("Enter the name and path of the locked pdf") 
-password = input("Enter the password to unlock the pdf"
-unlocked_file = input("enter the name of the unlocked file") 
+locked_file = input("Enter the name and path of the locked pdf:  ") 
+password = input("Enter the password to unlock the pdf:  ")
+unlocked_file = input("enter the name of the unlocked file:  ") 
 
 
 # Ler o PDF protegido
