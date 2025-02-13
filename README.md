@@ -1,2 +1,4 @@
 # pdf_unlock
-simple python pdf unlock script
+simple python script to turn locked pdf into unlocked
+
+it is supposed you have the password
