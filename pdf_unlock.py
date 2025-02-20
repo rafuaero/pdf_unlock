@@ -1,22 +1,24 @@
 from PyPDF2 import PdfReader, PdfWriter
 import sys
 
+# .gitignore is configured to ignore pdf files
+
 locked_file = input("Enter the name and path of the locked pdf:  ") 
 password = input("Enter the password to unlock the pdf:  ")
 unlocked_file = input("enter the name of the unlocked file:  ") 
 
 
-# Ler o PDF protegido
+# read locked pdf
 reader = PdfReader(locked_file)
 if reader.is_encrypted:
     reader.decrypt(password)
 
-# Criar um novo PDF sem senha
+# create new pdf
 writer = PdfWriter()
 for page in reader.pages:
     writer.add_page(page)
 
-# Salvar o novo PDF sem senha
+# save pdf without password
 with open(unlocked_file, 'wb') as output_pdf:
     writer.write(output_pdf)
 
