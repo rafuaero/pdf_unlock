@@ -22,4 +22,4 @@ for page in reader.pages:
 with open(unlocked_file, 'wb') as output_pdf:
     writer.write(output_pdf)
 
-print(f"the pdf has been un locked")
+print(f"the pdf has been unlocked")
